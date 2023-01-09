@@ -30,8 +30,6 @@ import com.PizzariaHaro.repository.IngredientesRepository;
 	@Autowired
 	private IngredientesRepository ingredientesRepository;
 
-
-	
 	@PostMapping //para receber alguma informação
 	public ResponseEntity<IngredientesModel>post(@jakarta.validation.Valid @RequestBody IngredientesModel ingrediente){
 		return ResponseEntity.status(HttpStatus.CREATED).body(ingredientesRepository.save(ingrediente));
